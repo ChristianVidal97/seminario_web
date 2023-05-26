@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="orientacionTarjeta">
+        <div class="card text-bg-light mb-3" style="max-width: 120rem;">
+          <div class="card-header">EDITAR LIBROS</div>
+          <div class="card-body">
+      
+            <table *ngIf="listaLibros.length>0" class="table table-hover mt-3">
+              <thead>
+                <tr>
+                  <td>Nombre</td>
+                  <td>ISBN</td>
+                  <td>Editorial</td>
+                  <td>Autor</td>
+                  <td colspan="3">Opciones</td>
+      
+                </tr>
+              </thead>
+      
+      
+              <tbody>
+                <tr *ngFor="let coment of listaLibros">
+      
+                  <td><input type="text" id="Nombre"></td>
+
+                  <td> <input type="text" id="isbn"></td>
+                  <td> <input type="text" id="editorial"></td>
+                  <td> <input type="text" id="autor"></td>
+                  <td style="width: 5%"><button class="btn btn-primary btn-sm float-end"
+                      routerLink="/editarinformacionlibro">Editar
+                    </button></td>
+                  <td style="width: 5%"><button class="btn btn-success btn-sm float-end" routerLink="/prestarlibro">Prestar
+                    </button></td>
+                  <td style="width: 5%"><button class="btn btn-danger btn-sm float-edd">Eliminar
+                    </button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Footer-->
+      <div class="footer">
+        <p>2022 © Biblioteca UDENAR | Ipiales, Nariño - Colombia</p>
+      </div>
+</body>
+</html>
