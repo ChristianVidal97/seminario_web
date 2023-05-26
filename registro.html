@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="orientacionTarjeta">
+        <div class="card">
+          <h5 class="card-header text-center">REGISTRO DE LIBROS</h5>
+      
+          <img src="./assets/reglibro.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="container">
+      
+              <form [formGroup]="registroLibro" (ngSubmit)="poner()">
+                <div class="mb-3">
+                  <label for="Nombre" class="form-label">Nombre</label>
+                  <input formControlName="nombre_libro" type="text" class="form-control" id="nombre_libro">
+                </div>
+      
+                <div class="mb-3">
+                  <label for="isbn" class="form-label">ISBN</label>
+                  <input formControlName="isbn" type="text" class="form-control" id="isbn">
+                </div>
+      
+                <div class="mb-3">
+                  <label for="editorial" class="form-label">Editorial</label>
+                  <input formControlName="editorial" type="text" class="form-control" id="editorial">
+                </div>
+      
+                <div class="mb-3">
+                  <label for="autor" class="form-label">Autor</label>
+                  <input formControlName="autor_libro" type="text" class="form-control" id="autor_libro">
+                </div>
+      
+      
+                <div class="botonCenter">
+                  <button type="submit" class="btn btn-success ">Registrar</button>
+                  <button type="menu" class="btn btn-success " onclick="void">volver
+                    
+                  </button>
+
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
